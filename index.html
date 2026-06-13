@@ -1,10 +1,330 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Best Of The 209</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Best of the 209 | Coming Soon</title>
+
+<style>
+:root{
+    --bg:#070707;
+    --gold:#d8b35a;
+    --cream:#fff3dc;
+    --soft:#c9a2ff;
+    --muted:#b9b0a3;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(216,179,90,.22), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(201,162,255,.18), transparent 30%),
+        linear-gradient(135deg,#050505,#111,#060606);
+    color:var(--cream);
+    overflow-x:hidden;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+    position:relative;
+}
+
+.glow{
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:rgba(216,179,90,.22);
+    filter:blur(90px);
+    animation:float 7s ease-in-out infinite;
+}
+
+.glow.one{top:8%;left:8%;}
+.glow.two{bottom:8%;right:8%;background:rgba(201,162,255,.18);}
+
+.card{
+    width:100%;
+    max-width:1050px;
+    min-height:680px;
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:34px;
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(22px);
+    box-shadow:0 30px 100px rgba(0,0,0,.65);
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    overflow:hidden;
+    position:relative;
+    z-index:2;
+}
+
+.left{
+    padding:70px 60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.badge{
+    width:max-content;
+    padding:10px 18px;
+    border:1px solid rgba(216,179,90,.55);
+    border-radius:999px;
+    color:var(--gold);
+    font-size:.8rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:28px;
+    background:rgba(216,179,90,.08);
+}
+
+h1{
+    font-size:clamp(3rem,7vw,6.7rem);
+    line-height:.88;
+    letter-spacing:-4px;
+    margin-bottom:26px;
+}
+
+h1 span{
+    display:block;
+    color:var(--gold);
+    text-shadow:0 0 28px rgba(216,179,90,.28);
+}
+
+.subtitle{
+    max-width:560px;
+    color:var(--muted);
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:34px;
+}
+
+.form{
+    display:flex;
+    gap:12px;
+    max-width:520px;
+    margin-bottom:32px;
+}
+
+.form input{
+    flex:1;
+    padding:18px 20px;
+    border:none;
+    border-radius:14px;
+    background:rgba(255,255,255,.13);
+    color:white;
+    outline:none;
+    font-size:1rem;
+}
+
+.form input::placeholder{
+    color:#cfc7bd;
+}
+
+.form button{
+    border:none;
+    border-radius:14px;
+    padding:18px 25px;
+    background:linear-gradient(135deg,#f7d77a,#b98a2e);
+    color:#111;
+    font-weight:800;
+    cursor:pointer;
+    box-shadow:0 12px 34px rgba(216,179,90,.25);
+}
+
+.note{
+    color:#8f8678;
+    font-size:.92rem;
+}
+
+.right{
+    position:relative;
+    background:
+        radial-gradient(circle at center, rgba(255,255,255,.14), transparent 52%),
+        linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+}
+
+.plush{
+    width:310px;
+    height:390px;
+    border-radius:48% 48% 42% 42%;
+    background:
+        radial-gradient(circle at 35% 28%, #fff8ee 0 7%, transparent 8%),
+        radial-gradient(circle at 65% 28%, #fff8ee 0 7%, transparent 8%),
+        linear-gradient(145deg,#d7b98d,#8a623c);
+    box-shadow:
+        inset -30px -45px 80px rgba(0,0,0,.28),
+        inset 22px 18px 50px rgba(255,255,255,.22),
+        0 40px 80px rgba(0,0,0,.45);
+    position:relative;
+    animation:breathe 4s ease-in-out infinite;
+}
+
+.plush:before,
+.plush:after{
+    content:"";
+    position:absolute;
+    top:-38px;
+    width:105px;
+    height:115px;
+    background:linear-gradient(145deg,#d7b98d,#7a522f);
+    border-radius:50%;
+    z-index:-1;
+}
+
+.plush:before{left:5px;}
+.plush:after{right:5px;}
+
+.eye{
+    position:absolute;
+    top:135px;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:#111;
+    box-shadow:0 0 0 7px rgba(255,255,255,.08);
+}
+
+.eye.left-eye{left:93px;}
+.eye.right-eye{right:93px;}
+
+.nose{
+    position:absolute;
+    top:178px;
+    left:50%;
+    transform:translateX(-50%);
+    width:46px;
+    height:32px;
+    background:#211711;
+    border-radius:45% 45% 55% 55%;
+}
+
+.shine{
+    position:absolute;
+    top:0;
+    right:-80px;
+    width:160px;
+    height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);
+    transform:skewX(-18deg);
+    animation:shine 5s infinite;
+}
+
+.footer{
+    position:absolute;
+    bottom:24px;
+    left:0;
+    right:0;
+    text-align:center;
+    color:#80786d;
+    font-size:.9rem;
+    z-index:3;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-28px);}
+}
+
+@keyframes breathe{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.025);}
+}
+
+@keyframes shine{
+    0%{right:-180px;}
+    45%,100%{right:110%;}
+}
+
+@media(max-width:850px){
+    .card{
+        grid-template-columns:1fr;
+    }
+
+    .left{
+        padding:50px 28px;
+        text-align:center;
+        align-items:center;
+    }
+
+    .right{
+        min-height:360px;
+    }
+
+    .form{
+        flex-direction:column;
+        width:100%;
+    }
+
+    h1{
+        letter-spacing:-2px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Best Of The 209</h1>
-    <p>Coming Soon</p>
+
+<section class="hero">
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <div class="card">
+        <div class="shine"></div>
+
+        <div class="left">
+            <div class="badge">Premium Plush Collection</div>
+
+            <h1>
+                Something Soft
+                <span>Is Coming</span>
+            </h1>
+
+            <p class="subtitle">
+                A premium plush drop inspired by comfort, nostalgia, and collectible-quality design.
+                Beautifully made. Limited release. Built to be loved.
+            </p>
+
+            <form class="form">
+                <input type="email" placeholder="Enter your email for early access" />
+                <button type="submit">Notify Me</button>
+            </form>
+
+            <p class="note">
+                Launching soon at BestOfThe209.com
+            </p>
+        </div>
+
+        <div class="right">
+            <div class="plush">
+                <div class="eye left-eye"></div>
+                <div class="eye right-eye"></div>
+                <div class="nose"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 Best of the 209. All rights reserved.
+    </div>
+</section>
+
 </body>
 </html>
+```
