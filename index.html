@@ -8,69 +8,58 @@
 
 <style>
 
-*{
+html,body{
     margin:0;
     padding:0;
-    box-sizing:border-box;
-}
-
-html,body{
+    width:100%;
     height:100%;
-    font-family:Arial, Helvetica, sans-serif;
     overflow:hidden;
-    background:#000;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
-.video-bg{
+video{
     position:fixed;
     top:0;
     left:0;
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
     object-fit:cover;
-    z-index:-3;
-    animation:zoom 30s ease-in-out infinite alternate;
+    z-index:1;
 }
 
 .overlay{
     position:fixed;
     inset:0;
-    background:
-        linear-gradient(
-            rgba(0,0,0,.55),
-            rgba(0,0,0,.70)
-        );
-    z-index:-2;
-}
-
-.hero{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:20px;
+    background:rgba(0,0,0,.45);
+    z-index:2;
 }
 
 .content{
-    max-width:1000px;
+    position:relative;
+    z-index:3;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
 }
 
-.location{
+.kicker{
     color:#d9b15b;
+    letter-spacing:5px;
     text-transform:uppercase;
-    letter-spacing:6px;
     font-weight:bold;
     margin-bottom:20px;
 }
 
 h1{
-    font-size:clamp(4rem,12vw,9rem);
-    line-height:.85;
-    letter-spacing:-5px;
+    font-size:clamp(4rem,10vw,9rem);
+    margin:0;
+    line-height:.9;
     text-transform:uppercase;
-    color:white;
-    text-shadow:0 10px 40px rgba(0,0,0,.7);
 }
 
 .gold{
@@ -78,96 +67,60 @@ h1{
 }
 
 .tagline{
-    margin-top:30px;
-    font-size:clamp(1.1rem,2vw,1.6rem);
-    color:#f2f2f2;
     max-width:800px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-top:25px;
+    font-size:clamp(1rem,2vw,1.5rem);
     line-height:1.7;
 }
 
-.line{
-    width:120px;
-    height:2px;
-    background:#d9b15b;
-    margin:35px auto;
-}
-
 .coming{
-    text-transform:uppercase;
-    letter-spacing:5px;
+    margin-top:40px;
     color:#d9b15b;
+    letter-spacing:4px;
+    text-transform:uppercase;
     font-weight:bold;
 }
 
 .footer{
     position:fixed;
     bottom:20px;
-    left:0;
-    right:0;
+    width:100%;
     text-align:center;
     color:rgba(255,255,255,.7);
-    font-size:.9rem;
-}
-
-@keyframes zoom{
-    from{
-        transform:scale(1);
-    }
-    to{
-        transform:scale(1.08);
-    }
-}
-
-@media(max-width:768px){
-
-    h1{
-        letter-spacing:-2px;
-    }
-
-    .location{
-        letter-spacing:3px;
-    }
-
+    z-index:3;
 }
 
 </style>
 </head>
 <body>
 
-<video class="video-bg" autoplay muted loop playsinline>
+<video autoplay muted loop playsinline>
     <source src="video/background.mp4" type="video/mp4">
 </video>
 
 <div class="overlay"></div>
 
-<section class="hero">
-    <div class="content">
+<div class="content">
 
-        <div class="location">
-            California's Central Valley
-        </div>
-
-        <h1>
-            Best of the
-            <span class="gold">209</span>
-        </h1>
-
-        <p class="tagline">
-            Discover the restaurants, local businesses, events,
-            outdoor adventures, and hidden gems that make the
-            209 one of California's most unique regions.
-        </p>
-
-        <div class="line"></div>
-
-        <div class="coming">
-            Launching Soon
-        </div>
-
+    <div class="kicker">
+        California's Central Valley
     </div>
-</section>
+
+    <h1>
+        Best of the
+        <span class="gold">209</span>
+    </h1>
+
+    <div class="tagline">
+        Discover the places, people, food, businesses,
+        events, and hidden gems that make the 209 one of California's most unique regions.
+    </div>
+
+    <div class="coming">
+        Launching Soon
+    </div>
+
+</div>
 
 <div class="footer">
     © 2026 BestOfThe209.com
