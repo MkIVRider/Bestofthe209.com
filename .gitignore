@@ -1,0 +1,16 @@
+# API keys & config
+config.js
+
+# Fetch scripts (local tooling only)
+fetch-photos.js
+fetch-scenic.js
+fetch-scenic-unsplash.js
+fetch-scenic-v2.js
+fix-scenic.js
+
+# Node
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
