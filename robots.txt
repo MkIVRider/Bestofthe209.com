@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Live pages
+Allow: /index.html
+Allow: /dining.html
+Allow: /wineries.html
+Allow: /hotels.html
+Allow: /camping.html
+
+# Block pages that don't exist yet
+Disallow: /hiking.html
+Disallow: /fishing.html
+Disallow: /boating.html
+Disallow: /car-service.html
+Disallow: /events.html
+Disallow: /coffee.html
+Disallow: /family.html
+Disallow: /hidden-gems.html
+
+Sitemap: https://bestofthe209.com/sitemap.xml
