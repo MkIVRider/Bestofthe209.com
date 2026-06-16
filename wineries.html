@@ -23,10 +23,16 @@ body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url(
 .hero{position:relative;height:50vh;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(128,0,64,.06) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(217,177,91,.04) 0%,transparent 50%),linear-gradient(180deg,var(--dark) 0%,#0d0d0d 100%)}
 .hero-particles{position:absolute;inset:0;overflow:hidden}
-.hero-glow{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);width:50%;height:100px;background:radial-gradient(ellipse at center bottom,rgba(128,0,64,.1) 0%,rgba(217,177,91,.05) 40%,transparent 70%);animation:glow-pulse 4s ease-in-out infinite alternate;pointer-events:none;z-index:1}
+/* Wine legs - canvas based */
+.hero-legs{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.hero-legs canvas{position:absolute;inset:0;width:100%;height:100%}
+/* Wine legs are rendered via canvas - see JS below */
+
+.hero-glow{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);width:50%;height:100px;background:radial-gradient(ellipse at center bottom,rgba(100,20,60,.12) 0%,rgba(217,177,91,.04) 40%,transparent 70%);animation:glow-pulse 4s ease-in-out infinite alternate;pointer-events:none;z-index:1}
 @keyframes glow-pulse{0%{opacity:.5;transform:translateX(-50%) scaleX(1)}50%{opacity:.9;transform:translateX(-50%) scaleX(1.04)}100%{opacity:.6;transform:translateX(-50%) scaleX(.96)}}
-.particle{position:absolute;width:2px;height:2px;background:var(--gold);border-radius:50%;opacity:0;animation:float 8s infinite}
-@keyframes float{0%{opacity:0;transform:translateY(100vh) scale(0)}10%{opacity:.5}90%{opacity:.5}100%{opacity:0;transform:translateY(-20vh) scale(1.5)}}
+.particle{position:absolute;display:none}
+
+/* Bubbles removed — wine legs only */
 
 .hero-content{position:relative;z-index:2;padding:0 24px}
 .hero-badge{display:inline-block;padding:6px 16px;border-radius:20px;border:1px solid var(--gold-glow);background:var(--gold-dim);color:var(--gold);font-size:.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
@@ -92,6 +98,7 @@ body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url(
 
 <header class="hero">
     <div class="hero-bg"></div>
+    <div class="hero-legs" id="wine-legs"></div>
     <div class="hero-glow"></div>
     <div class="hero-particles" id="particles"></div>
     <div class="hero-content">
@@ -209,8 +216,168 @@ applyFilters();
 // Nav shrink
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60)});
 
-// Particles
-const pc=document.getElementById('particles');for(let i=0;i<20;i++){const p=document.createElement('div');p.className='particle';p.style.left=(25+Math.random()*50)+'%';p.style.animationDelay=Math.random()*8+'s';p.style.animationDuration=(6+Math.random()*4)+'s';pc.appendChild(p)}
+// Wine legs only — no bubbles
+const pc=document.getElementById('particles');
+// (particles container kept for DOM structure but empty)
+
+// Wine legs - realistic canvas animation
+const legsContainer = document.getElementById('wine-legs');
+const canvas = document.createElement('canvas');
+legsContainer.appendChild(canvas);
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+    canvas.width = legsContainer.offsetWidth * window.devicePixelRatio;
+    canvas.height = legsContainer.offsetHeight * window.devicePixelRatio;
+    canvas.style.width = legsContainer.offsetWidth + 'px';
+    canvas.style.height = legsContainer.offsetHeight + 'px';
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+const W = () => legsContainer.offsetWidth;
+const H = () => legsContainer.offsetHeight;
+
+class WineLeg {
+    constructor() { this.reset(); }
+
+    reset() {
+        this.x = 30 + Math.random() * (W() - 60);
+        this.headY = -10;
+        this.tailY = -10;
+        this.headRadius = 4 + Math.random() * 6;
+        this.width = 1.5 + Math.random() * 2;
+        this.speed = 0.15 + Math.random() * 0.4;
+        this.headSpeed = this.speed * 0.7;
+        this.phase = 'growing'; // growing, dripping, fading
+        this.opacity = 0;
+        this.maxOpacity = 0.25 + Math.random() * 0.2;
+        this.delay = Math.random() * 600;
+        this.frame = 0;
+        this.wobble = Math.random() * 0.3;
+        this.wobbleSpeed = 0.01 + Math.random() * 0.02;
+        // Pool at top (the bulge before it drips)
+        this.poolSize = this.headRadius * (1.5 + Math.random());
+        this.poolReady = 20 + Math.random() * 40;
+        this.poolTimer = 0;
+    }
+
+    update() {
+        this.frame++;
+        if (this.frame < this.delay) return;
+
+        if (this.phase === 'growing') {
+            this.opacity = Math.min(this.opacity + 0.005, this.maxOpacity);
+            this.poolTimer++;
+            // Pool grows at top
+            this.headRadius = Math.min(this.headRadius + 0.02, this.poolSize);
+            if (this.poolTimer > this.poolReady) {
+                this.phase = 'dripping';
+            }
+        } else if (this.phase === 'dripping') {
+            this.tailY += this.speed;
+            this.headY = this.tailY - 6;
+            // Leg stretches — head moves slower
+            if (this.tailY > H() * 0.8) {
+                this.phase = 'fading';
+            }
+        } else if (this.phase === 'fading') {
+            this.tailY += this.speed * 0.5;
+            this.opacity -= 0.003;
+            if (this.opacity <= 0) this.reset();
+        }
+    }
+
+    draw() {
+        if (this.frame < this.delay || this.opacity <= 0) return;
+
+        const wobbleX = Math.sin(this.frame * this.wobbleSpeed) * this.wobble;
+        const x = this.x + wobbleX;
+
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+
+        if (this.phase === 'growing') {
+            // Draw the pool/bulge forming at top
+            ctx.beginPath();
+            ctx.ellipse(x, 8, this.headRadius, this.headRadius * 0.7, 0, 0, Math.PI * 2);
+            const poolGrad = ctx.createRadialGradient(x, 8, 0, x, 8, this.headRadius);
+            poolGrad.addColorStop(0, 'rgba(217,177,91,.4)');
+            poolGrad.addColorStop(0.6, 'rgba(217,177,91,.2)');
+            poolGrad.addColorStop(1, 'rgba(217,177,91,0)');
+            ctx.fillStyle = poolGrad;
+            ctx.fill();
+
+            // Highlight
+            ctx.beginPath();
+            ctx.ellipse(x - this.headRadius * 0.3, 6, this.headRadius * 0.25, this.headRadius * 0.2, 0, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255,255,255,.15)';
+            ctx.fill();
+        } else {
+            // Draw the dripping leg
+            const startY = 8;
+            const endY = this.tailY;
+
+            // Thin trail
+            const legGrad = ctx.createLinearGradient(x, startY, x, endY);
+            legGrad.addColorStop(0, 'rgba(217,177,91,.1)');
+            legGrad.addColorStop(0.3, 'rgba(217,177,91,.25)');
+            legGrad.addColorStop(0.7, 'rgba(200,160,70,.3)');
+            legGrad.addColorStop(1, 'rgba(217,177,91,.1)');
+
+            ctx.beginPath();
+            ctx.moveTo(x - this.width / 2, startY);
+            // Slight curve for organic feel
+            const midY = (startY + endY) / 2;
+            ctx.quadraticCurveTo(x - this.width / 2 + wobbleX * 2, midY, x - this.width * 0.6, endY);
+            ctx.lineTo(x + this.width * 0.6, endY);
+            ctx.quadraticCurveTo(x + this.width / 2 + wobbleX * 2, midY, x + this.width / 2, startY);
+            ctx.closePath();
+            ctx.fillStyle = legGrad;
+            ctx.fill();
+
+            // Droplet at the tip
+            const dropSize = this.width * 1.8 + 2;
+            ctx.beginPath();
+            ctx.ellipse(x + wobbleX * 0.5, endY + dropSize * 0.5, dropSize, dropSize * 1.2, 0, 0, Math.PI * 2);
+            const dropGrad = ctx.createRadialGradient(x, endY + dropSize * 0.5, 0, x, endY + dropSize * 0.5, dropSize);
+            dropGrad.addColorStop(0, 'rgba(217,177,91,.4)');
+            dropGrad.addColorStop(0.5, 'rgba(200,150,50,.25)');
+            dropGrad.addColorStop(1, 'rgba(217,177,91,0)');
+            ctx.fillStyle = dropGrad;
+            ctx.fill();
+
+            // Tiny highlight on droplet
+            ctx.beginPath();
+            ctx.ellipse(x - dropSize * 0.3, endY + dropSize * 0.2, dropSize * 0.2, dropSize * 0.15, 0, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255,255,255,.2)';
+            ctx.fill();
+
+            // Residual pool at top (gets thinner as it drips)
+            const remainingPool = Math.max(2, this.poolSize * (1 - this.tailY / H()));
+            ctx.beginPath();
+            ctx.ellipse(x, 8, remainingPool, remainingPool * 0.5, 0, 0, Math.PI * 2);
+            const rpGrad = ctx.createRadialGradient(x, 8, 0, x, 8, remainingPool);
+            rpGrad.addColorStop(0, 'rgba(217,177,91,.2)');
+            rpGrad.addColorStop(1, 'rgba(217,177,91,0)');
+            ctx.fillStyle = rpGrad;
+            ctx.fill();
+        }
+
+        ctx.restore();
+    }
+}
+
+const legs = [];
+for (let i = 0; i < 10; i++) legs.push(new WineLeg());
+
+function animateLegs() {
+    ctx.clearRect(0, 0, W(), H());
+    legs.forEach(leg => { leg.update(); leg.draw(); });
+    requestAnimationFrame(animateLegs);
+}
+animateLegs();
 </script>
 </body>
 </html>
