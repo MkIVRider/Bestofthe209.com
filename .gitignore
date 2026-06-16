@@ -1,12 +1,9 @@
 # API keys & config
 config.js
 
-# Fetch scripts (local tooling only)
-fetch-photos.js
-fetch-scenic.js
-fetch-scenic-unsplash.js
-fetch-scenic-v2.js
-fix-scenic.js
+# Fetch scripts (local tooling only, contain API keys)
+fetch-*.js
+fix-*.js
 
 # Node
 node_modules/
