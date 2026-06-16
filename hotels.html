@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5658205454534021"
+     crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Hotels & Lodging in the 209 | Best of the 209</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#d9b15b;--gold-dim:rgba(217,177,91,.15);--gold-glow:rgba(217,177,91,.3);--dark:#060606;--card-bg:rgba(255,255,255,.03);--card-border:rgba(255,255,255,.06);--text:#f0f0f0;--text-dim:#999;--radius:16px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:rgba(6,6,6,.85);backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(255,255,255,.04);transition:all .3s}
+.nav.scrolled{padding:12px 40px;background:rgba(6,6,6,.95);box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.nav-brand{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;text-decoration:none;color:var(--gold);letter-spacing:1px}
+.nav-back{text-decoration:none;color:var(--text-dim);font-size:.85rem;padding:8px 20px;border:1px solid rgba(255,255,255,.1);border-radius:24px;transition:all .3s;font-weight:500}
+.nav-back:hover{border-color:var(--gold);color:var(--gold);box-shadow:0 0 20px var(--gold-dim)}
+
+.hero{position:relative;height:50vh;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(25,30,60,.2) 0%,transparent 50%),radial-gradient(ellipse at 70% 70%,rgba(217,177,91,.03) 0%,transparent 50%),linear-gradient(180deg,#020208 0%,#0a0c18 100%)}
+.hero-stars{position:absolute;inset:0;overflow:hidden}
+
+/* Twinkling stars */
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle var(--dur) ease-in-out infinite var(--delay)}
+.star.big{width:3px;height:3px;box-shadow:0 0 4px rgba(255,255,255,.3)}
+@keyframes twinkle{0%,100%{opacity:.1;transform:scale(.8)}50%{opacity:.9;transform:scale(1.2)}}
+
+/* Soft moonlight glow */
+.hero-glow{position:absolute;top:12%;right:12%;width:60px;height:60px;background:radial-gradient(circle,rgba(230,235,255,.9) 0%,rgba(200,210,255,.4) 20%,rgba(150,170,220,.1) 45%,transparent 65%);border-radius:50%;pointer-events:none;animation:moon-pulse 6s ease-in-out infinite alternate;box-shadow:0 0 60px rgba(200,210,255,.15),0 0 120px rgba(200,210,255,.08)}
+@keyframes moon-pulse{0%{opacity:.7;transform:scale(1);box-shadow:0 0 60px rgba(200,210,255,.15),0 0 120px rgba(200,210,255,.08)}100%{opacity:.9;transform:scale(1.05);box-shadow:0 0 80px rgba(200,210,255,.2),0 0 160px rgba(200,210,255,.1)}}
+
+/* Shooting stars removed */
+
+.hero-content{position:relative;z-index:2;padding:0 24px}
+
+/* City skyline silhouette */
+.hero-skyline{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:120px;
+    z-index:1;
+    pointer-events:none;
+}
+
+.hero-skyline svg{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:100%;
+}
+
+/* Glowing windows */
+.window{
+    animation:window-flicker var(--dur) ease-in-out infinite var(--delay);
+}
+
+@keyframes window-flicker{
+    0%,100%{opacity:.3}
+    50%{opacity:.9}
+}
+.hero-badge{display:inline-block;padding:6px 16px;border-radius:20px;border:1px solid var(--gold-glow);background:var(--gold-dim);color:var(--gold);font-size:.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:900;line-height:1;margin-bottom:20px}
+.hero h1 .gold{color:var(--gold);position:relative}
+.hero h1 .gold::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:2px}
+.hero-sub{font-size:clamp(1rem,1.6vw,1.2rem);color:var(--text-dim);max-width:580px;margin:0 auto;line-height:1.7;font-weight:300}
+
+.filters{position:sticky;top:56px;z-index:100;background:rgba(6,6,6,.9);backdrop-filter:blur(16px);padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.04)}
+.filter-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin-bottom:10px}
+.filter-row:last-child{margin-bottom:0}
+.filter-label{font-size:.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-right:8px}
+.filter-btn{padding:6px 16px;border-radius:20px;border:1px solid rgba(255,255,255,.08);background:transparent;color:rgba(255,255,255,.5);font-size:.78rem;font-weight:500;cursor:pointer;transition:all .3s cubic-bezier(.4,0,.2,1)}
+.filter-btn:hover{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.8);background:rgba(255,255,255,.04)}
+.filter-btn.active{background:var(--gold-dim);border-color:var(--gold);color:var(--gold);box-shadow:0 0 16px rgba(217,177,91,.1)}
+.results-count{text-align:center;padding:8px;font-size:.8rem;color:var(--text-dim)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:28px;max-width:1280px;margin:0 auto;padding:48px 28px 100px}
+
+.card{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--card-bg);border:1px solid var(--card-border);text-decoration:none;color:var(--text);display:block;transform:translateY(30px);opacity:0;transition:all .5s cubic-bezier(.4,0,.2,1)}
+.card.visible{transform:translateY(0);opacity:1}
+.card::before{content:'';position:absolute;inset:0;border-radius:var(--radius);padding:1px;background:linear-gradient(135deg,rgba(217,177,91,0) 0%,rgba(217,177,91,.1) 50%,rgba(217,177,91,0) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .4s;pointer-events:none;z-index:3}
+.card:hover::before{opacity:1}
+.card:hover{border-color:rgba(217,177,91,.2);transform:translateY(-6px) scale(1.01);box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(217,177,91,.05)}
+
+.card-slideshow{position:relative;width:100%;height:240px;overflow:hidden}
+.card-slideshow::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(6,6,6,.8));z-index:1;pointer-events:none}
+.card-slideshow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.05);transition:opacity 1.2s ease,transform 6s ease}
+.card-slideshow img.active{opacity:1;transform:scale(1)}
+.slide-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.3);transition:all .4s}
+.dot.active{background:var(--gold);box-shadow:0 0 8px var(--gold-glow);transform:scale(1.3)}
+
+.card-body{padding:24px;position:relative}
+.card-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;margin-bottom:6px}
+.card-type{font-size:.72rem;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:12px}
+.card-desc{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:16px;font-weight:300}
+.card-meta{display:flex;align-items:center;gap:14px;font-size:.78rem;color:rgba(255,255,255,.4);flex-wrap:wrap}
+.card-meta span{display:flex;align-items:center;gap:4px}
+.card-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;padding:8px 16px;border-radius:20px;background:var(--gold-dim);border:1px solid rgba(217,177,91,.2);font-size:.75rem;color:var(--gold);font-weight:600;letter-spacing:.5px;transition:all .3s}
+.card:hover .card-cta{background:rgba(217,177,91,.25);border-color:var(--gold);box-shadow:0 4px 16px rgba(217,177,91,.15)}
+
+.card-img-placeholder{width:100%;height:240px;background:linear-gradient(135deg,#111,#1a1a1a);display:flex;align-items:center;justify-content:center;font-size:4rem}
+
+.cta{text-align:center;padding:80px 24px;position:relative}
+.cta::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(217,177,91,.2),transparent)}
+.cta h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:12px;color:var(--text)}
+.cta p{color:var(--text-dim);margin-bottom:28px;font-weight:300}
+.cta-btn{display:inline-block;padding:14px 36px;border-radius:28px;background:linear-gradient(135deg,var(--gold),#b8972e);color:#000;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:1.5px;font-size:.8rem;transition:all .3s;box-shadow:0 4px 24px rgba(217,177,91,.2)}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(217,177,91,.35)}
+
+.footer{text-align:center;color:rgba(255,255,255,.25);font-size:.75rem;padding:24px}
+
+@media(max-width:768px){.nav{padding:14px 20px}.hero{min-height:320px;height:40vh}.grid{grid-template-columns:1fr;padding:24px 16px 60px;gap:20px}.filters{top:48px;padding:14px 12px}.filter-btn{font-size:.7rem;padding:5px 12px}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <a class="nav-brand" href="index.html">Best of the 209</a>
+    <a class="nav-back" href="index.html">← All Categories</a>
+</nav>
+
+<header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-stars" id="stars"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-skyline" id="skyline">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" fill="none">
+            <!-- Buildings silhouette -->
+            <path d="M0,120 L0,95 L40,95 L40,70 L55,70 L55,60 L70,60 L70,75 L90,75 L90,50 L100,50 L100,45 L110,45 L110,50 L130,50 L130,80 L150,80 L150,55 L160,55 L160,40 L170,40 L170,55 L185,55 L185,65 L210,65 L210,35 L220,35 L220,30 L230,30 L230,35 L250,35 L250,70 L270,70 L270,60 L290,60 L290,45 L300,45 L300,25 L310,25 L310,20 L320,20 L320,25 L340,25 L340,50 L360,50 L360,75 L380,75 L380,55 L400,55 L400,40 L410,40 L410,30 L420,30 L420,15 L430,15 L430,30 L440,30 L440,45 L460,45 L460,65 L490,65 L490,50 L510,50 L510,35 L520,35 L520,20 L530,20 L530,35 L545,35 L545,55 L570,55 L570,70 L590,70 L590,45 L610,45 L610,55 L630,55 L630,38 L640,38 L640,25 L650,25 L650,38 L670,38 L670,60 L700,60 L700,75 L720,75 L720,50 L740,50 L740,35 L750,35 L750,22 L760,22 L760,35 L780,35 L780,55 L800,55 L800,70 L830,70 L830,45 L850,45 L850,60 L870,60 L870,50 L890,50 L890,30 L900,30 L900,25 L910,25 L910,30 L930,30 L930,55 L950,55 L950,70 L970,70 L970,80 L1000,80 L1000,60 L1020,60 L1020,45 L1040,45 L1040,55 L1060,55 L1060,70 L1080,70 L1080,85 L1120,85 L1120,75 L1150,75 L1150,90 L1200,90 L1200,120 Z" fill="rgba(20,22,35,.95)" stroke="rgba(60,70,100,.3)" stroke-width=".5"/>
+            <!-- Windows - will glow -->
+            <g id="windows"></g>
+        </svg>
+    </div>
+    <div class="hero-content">
+        <span class="hero-badge">Rest • Relax • Recharge</span>
+        <h1>Best <span class="gold">Hotels</span> in the 209</h1>
+        <p class="hero-sub">From luxury wine country resorts to historic Gold Rush inns — find the perfect place to rest after exploring the 209.</p>
+    </div>
+</header>
+
+<div class="filters">
+    <div class="filter-row">
+        <span class="filter-label">Region</span>
+        <button class="filter-btn active" data-region="all">All</button>
+        <button class="filter-btn" data-region="Lodi">Lodi</button>
+        <button class="filter-btn" data-region="Stockton">Stockton</button>
+        <button class="filter-btn" data-region="Modesto">Modesto</button>
+        <button class="filter-btn" data-region="Lockeford">Lockeford</button>
+        <button class="filter-btn" data-region="Angels Camp">Angels Camp</button>
+        <button class="filter-btn" data-region="Murphys">Murphys</button>
+        <button class="filter-btn" data-region="Copperopolis">Copperopolis</button>
+        <button class="filter-btn" data-region="Tracy">Tracy</button>
+        <button class="filter-btn" data-region="Manteca">Manteca</button>
+    </div>
+    <div class="filter-row">
+        <span class="filter-label">Type</span>
+        <button class="filter-btn active" data-type="all">All</button>
+        <button class="filter-btn" data-type="luxury">Luxury / Boutique</button>
+        <button class="filter-btn" data-type="historic">Historic / B&B</button>
+        <button class="filter-btn" data-type="resort">Resort / Golf</button>
+        <button class="filter-btn" data-type="cabin">Cabins / Camping</button>
+        <button class="filter-btn" data-type="hotel">Hotels</button>
+    </div>
+    <div class="results-count" id="results-count"></div>
+</div>
+
+<section class="grid" id="hotel-grid"></section>
+
+<section class="cta">
+    <h2>Know a hidden gem we should feature?</h2>
+    <p>Help us build the ultimate 209 lodging guide.</p>
+    <a class="cta-btn" href="mailto:admin@bestofthe209.com?subject=Hotel Suggestion">Suggest a Place to Stay</a>
+</section>
+
+<div class="footer">© 2026 BestOfThe209.com</div>
+
+<script>
+const hotels = [
+{name:"Wine & Roses Resort & Spa",region:"Lodi",type:"luxury",style:"Luxury Boutique Resort",desc:"A century-old Lodi icon relaunched with Appellation Hotels. Spa, farm-to-table restaurant, pool with cabanas, and lush gardens in the heart of wine country. Rated 9/10.",slug:"wine-roses",query:"Wine and Roses Resort Spa Lodi CA",highlight:"Spa • Pool • Fine Dining"},
+{name:"Hotel Bayit",region:"Modesto",type:"luxury",style:"Luxury Boutique — 18 Suites",desc:"Salida's hidden luxury retreat. 18 exquisite suites with Stearns & Foster beds, Nespresso machines, Tom Dixon toiletries, heated pool, courtyard garden, and on-site café. 9.2/10 on Expedia.",slug:"hotel-bayit",query:"Hotel Bayit Salida CA",highlight:"Boutique • Pool • Café"},
+{name:"University Plaza Waterfront Hotel",region:"Stockton",type:"hotel",style:"Art Deco Waterfront",desc:"Elegant Art Deco hotel on Stockton's Delta waterway. Outdoor pool, spa tub, Delta Bistro restaurant with pool views, and a garden oasis in the civic center.",slug:"university-plaza",query:"University Plaza Waterfront Hotel Stockton CA",highlight:"Waterfront • Pool • Restaurant"},
+{name:"Greenhorn Creek Resort",region:"Angels Camp",type:"resort",style:"Golf Resort & Lodges",desc:"Championship golf resort since 1996 with course-side lodges and the 'Caddyshack' group house. Premium bedding, fully equipped kitchens, back decks with BBQs, and fairway views.",slug:"greenhorn-creek",query:"Greenhorn Creek Resort Angels Camp CA",highlight:"Golf • Lodges • Restaurant"},
+{name:"Angels Camp RV & Camping Resort",region:"Angels Camp",type:"cabin",style:"Lodges & Cabins",desc:"Family-friendly park with lodges, rustic cabins, and premium tent sites in Gold Country. Full hookups, clean facilities, and the splendor of the Sierra Foothills year-round.",slug:"angels-camp-rv",query:"Angels Camp RV Camping Resort CA",highlight:"Cabins • RV • Family"},
+{name:"Saddle Creek Resort",region:"Copperopolis",type:"resort",style:"Golf & Lake Resort",desc:"Luxury resort community overlooking Saddle Creek's championship course and lake. Stunning views, upscale dining at Verona18, and a true escape from the valley floor.",slug:"saddle-creek",query:"Saddle Creek Resort Copperopolis CA",highlight:"Golf • Lake • Fine Dining"},
+{name:"Murphys Historic Hotel",region:"Murphys",type:"historic",style:"1856 Gold Rush Hotel",desc:"Operating continuously since 1856 — Mark Twain, Ulysses S. Grant, and Black Bart all stayed here. Original Gold Rush architecture with a saloon, restaurant, and nine historic rooms.",slug:"murphys-inn",query:"Murphys Historic Hotel Murphys CA",highlight:"Historic • Saloon • Restaurant"},
+{name:"Dunbar House 1880",region:"Murphys",type:"historic",style:"Victorian B&B — 1880",desc:"Elegant Italianate Victorian B&B in downtown Murphys. Beautifully appointed rooms, lush gardens, gourmet breakfast, and walking distance to tasting rooms and shops.",slug:"dunbar-house",query:"Dunbar House 1880 Murphys CA",highlight:"Victorian • Gardens • Breakfast"},
+{name:"Best Western Plus Heritage Inn",region:"Stockton",type:"hotel",style:"Full-Service Hotel",desc:"Solid full-service option in Stockton with clean rooms, pool, complimentary breakfast, and friendly staff. Great value for business or exploring the Delta.",slug:"best-western-stockton",query:"Best Western Plus Heritage Inn Stockton CA",highlight:"Pool • Breakfast • Value"},
+{name:"SpringHill Suites by Marriott",region:"Modesto",type:"hotel",style:"Modern Suite Hotel",desc:"Modern all-suite hotel in Modesto with separate living areas, pool, fitness center, and hot breakfast. Ideal base for exploring the central 209.",slug:"springhill-modesto",query:"SpringHill Suites Modesto CA",highlight:"Suites • Pool • Breakfast"},
+{name:"Hilton Stockton",region:"Stockton",type:"hotel",style:"Full-Service Hilton",desc:"Full-service Hilton on I-5 with on-site restaurant, garden, outdoor pool, and in-room WiFi. Four miles from Stockton Arena, 15 miles from Lodi Wine Country, under an hour to SF.",slug:"hilton-stockton",query:"Hilton Stockton CA",highlight:"Restaurant • Pool • Central"},
+{name:"Hampton Inn Tracy",region:"Tracy",type:"hotel",style:"Hilton — 3 Star",desc:"Clean, comfortable, and consistently praised by travelers. Hearty breakfast buffet, gym, and friendly staff. Close to Tracy Outlets and I-580 corridor.",slug:"hampton-tracy",query:"Hampton Inn Tracy CA",highlight:"Breakfast • Gym • Value"},
+{name:"Hampton Inn & Suites Manteca",region:"Manteca",type:"hotel",style:"Hilton — 3 Star",desc:"Outdoor pool, fitness center, daily buffet breakfast, and a staff that guests rave about. Great Manteca base for exploring the 209.",slug:"hampton-manteca",query:"Hampton Inn Suites Manteca CA",highlight:"Pool • Breakfast • Staff"},
+{name:"Residence Inn Lodi",region:"Lodi",type:"hotel",style:"Marriott — Extended Stay",desc:"4.5-star rated extended-stay suites with full kitchens — perfect for wine country weekends. Hot breakfast, pool, and easy access to Lodi's tasting rooms.",slug:"residence-inn-lodi",query:"Residence Inn Lodi Stockton CA",highlight:"Suites • Kitchen • Wine Country"},
+];
+
+const grid = document.getElementById('hotel-grid');
+const countEl = document.getElementById('results-count');
+function getMapsLink(q){return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`}
+
+// Shuffle
+for(let i=hotels.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[hotels[i],hotels[j]]=[hotels[j],hotels[i]]}
+
+hotels.forEach(h => {
+    const card = document.createElement('a');
+    card.className = 'card';
+    card.dataset.region = h.region;
+    card.dataset.type = h.type;
+    card.href = getMapsLink(h.query);
+    card.target = '_blank';
+    card.rel = 'noopener';
+
+    const slideshow = h.slug ? `
+        <div class="card-slideshow">
+            <img src="images/hotels/${h.slug}/1.jpg" alt="${h.name}" class="active" loading="lazy">
+            <img src="images/hotels/${h.slug}/2.jpg" alt="${h.name}" loading="lazy">
+            <img src="images/hotels/${h.slug}/3.jpg" alt="${h.name}" loading="lazy">
+            <div class="slide-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>` : `<div class="card-img-placeholder">🏨</div>`;
+
+    card.innerHTML = `${slideshow}
+        <div class="card-body">
+            <div class="card-name">${h.name}</div>
+            <div class="card-type">${h.style}</div>
+            <div class="card-desc">${h.desc}</div>
+            <div class="card-meta">
+                <span>📍 ${h.region}</span>
+                <span>✨ ${h.highlight}</span>
+            </div>
+            <span class="card-cta">View on Maps →</span>
+        </div>`;
+    grid.appendChild(card);
+});
+
+// Slideshows
+document.querySelectorAll('.card-slideshow').forEach(ss=>{const imgs=ss.querySelectorAll('img');const dots=ss.querySelectorAll('.dot');let cur=0;setInterval(()=>{imgs[cur].classList.remove('active');dots[cur].classList.remove('active');cur=(cur+1)%imgs.length;imgs[cur].classList.add('active');dots[cur].classList.add('active')},3500+Math.random()*2000)});
+
+// Scroll reveal
+const observer=new IntersectionObserver(entries=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*60);observer.unobserve(entry.target)}})},{threshold:.1});
+document.querySelectorAll('.card').forEach(c=>observer.observe(c));
+
+// Filters
+let activeRegion='all',activeType='all';
+function applyFilters(){let count=0;document.querySelectorAll('.card').forEach(card=>{const rm=activeRegion==='all'||card.dataset.region===activeRegion;const tm=activeType==='all'||card.dataset.type===activeType;const show=rm&&tm;card.style.display=show?'':'none';if(show)count++});countEl.textContent=`Showing ${count} place${count!==1?'s':''}`}
+document.querySelectorAll('[data-region]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-region]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeRegion=btn.dataset.region;applyFilters()})});
+document.querySelectorAll('[data-type]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-type]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeType=btn.dataset.type;applyFilters()})});
+applyFilters();
+
+// Nav
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60)});
+
+// Twinkling stars
+const starsContainer=document.getElementById('stars');
+for(let i=0;i<80;i++){
+    const s=document.createElement('div');
+    s.className='star'+(Math.random()>.85?' big':'');
+    s.style.left=Math.random()*100+'%';
+    s.style.top=Math.random()*100+'%';
+    s.style.setProperty('--dur',(2+Math.random()*4)+'s');
+    s.style.setProperty('--delay',Math.random()*4+'s');
+    starsContainer.appendChild(s);
+}
+
+// Glowing city windows
+const windowsGroup = document.getElementById('windows');
+const windowPositions = [
+    // [x, y] pairs placed on building faces
+    [45,75],[48,80],[52,75],[55,80],
+    [93,55],[97,55],[93,60],[97,60],[93,65],[97,65],
+    [155,60],[158,65],[162,60],[165,65],
+    [213,40],[217,40],[221,45],[225,45],[213,50],[217,50],
+    [303,30],[307,30],[303,35],[307,35],[313,30],[313,35],
+    [423,20],[427,20],[423,25],[427,25],[433,20],[433,25],
+    [513,25],[517,25],[523,30],[527,30],[513,35],[517,35],
+    [643,30],[647,30],[643,35],[647,35],
+    [753,27],[757,27],[753,32],[757,32],[753,37],
+    [893,35],[897,35],[903,35],[893,40],[897,40],[903,40],
+    [1023,50],[1027,50],[1033,50],[1023,55],[1027,55],
+];
+
+windowPositions.forEach(([x, y]) => {
+    if (Math.random() > 0.3) { // 70% of windows are lit
+        const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        rect.setAttribute('x', x);
+        rect.setAttribute('y', y);
+        rect.setAttribute('width', '3');
+        rect.setAttribute('height', '3');
+        rect.setAttribute('rx', '.5');
+        rect.setAttribute('class', 'window');
+        // Warm yellow-white glow
+        const colors = ['rgba(255,220,130,.7)','rgba(255,200,100,.6)','rgba(200,180,140,.5)','rgba(255,240,180,.8)'];
+        rect.setAttribute('fill', colors[Math.floor(Math.random()*colors.length)]);
+        rect.style.setProperty('--dur', (3+Math.random()*6)+'s');
+        rect.style.setProperty('--delay', Math.random()*5+'s');
+        windowsGroup.appendChild(rect);
+    }
+});
+</script>
+</body>
+</html>
