@@ -442,11 +442,28 @@ h1{
 <div class="carousel-caption" id="caption">Wine Country</div>
 
 <script>
-const images = document.querySelectorAll('#carousel img');
+const carousel = document.getElementById('carousel');
+const imgsArr = Array.from(carousel.querySelectorAll('img'));
+
+// Shuffle images randomly on each page load
+for (let i = imgsArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    carousel.appendChild(imgsArr[j]);
+    [imgsArr[i], imgsArr[j]] = [imgsArr[j], imgsArr[i]];
+}
+
+// Reset active state to first shuffled image
+imgsArr.forEach(img => img.classList.remove('active'));
+carousel.querySelectorAll('img')[0].classList.add('active');
+
+const images = carousel.querySelectorAll('img');
 const progressContainer = document.getElementById('progress');
 const captionEl = document.getElementById('caption');
 let current = 0;
 const INTERVAL = 7000;
+
+// Set initial caption
+captionEl.textContent = images[0].dataset.caption;
 
 // Build progress dots
 images.forEach((_, i) => {
