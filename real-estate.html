@@ -159,7 +159,7 @@ const offices = [
 
 const grid = document.getElementById('re-grid');
 const countEl = document.getElementById('results-count');
-function getMapsLink(q,pid){return pid?`https://www.google.com/maps/place/?q=place_id:${pid}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`}
+function getMapsLink(q,pid){return pid?`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}&query_place_id=${pid}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`}
 
 // Shuffle
 for(let i=offices.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[offices[i],offices[j]]=[offices[j],offices[i]]}

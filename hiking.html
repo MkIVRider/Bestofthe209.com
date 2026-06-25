@@ -152,7 +152,7 @@ const trails = [
 
 const grid = document.getElementById('hike-grid');
 const countEl = document.getElementById('results-count');
-function getMapsLink(q,pid){return pid?`https://www.google.com/maps/place/?q=place_id:${pid}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`}
+function getMapsLink(q,pid){return pid?`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}&query_place_id=${pid}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`}
 
 // Shuffle
 for(let i=trails.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[trails[i],trails[j]]=[trails[j],trails[i]]}

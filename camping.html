@@ -220,7 +220,7 @@ const camps = [
 
 const grid = document.getElementById('camp-grid');
 const countEl = document.getElementById('results-count');
-function getMapsLink(q,pid){return pid?`https://www.google.com/maps/place/?q=place_id:${pid}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`}
+function getMapsLink(q,pid){return pid?`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}&query_place_id=${pid}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`}
 
 for(let i=camps.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[camps[i],camps[j]]=[camps[j],camps[i]]}
 
