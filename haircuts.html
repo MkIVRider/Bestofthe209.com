@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5658205454534021"
+     crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Haircuts & Salons in the 209 | Best of the 209</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#d9b15b;--gold-dim:rgba(217,177,91,.15);--gold-glow:rgba(217,177,91,.3);--dark:#060606;--card-bg:rgba(255,255,255,.03);--card-border:rgba(255,255,255,.06);--text:#f0f0f0;--text-dim:#999;--radius:16px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:rgba(6,6,6,.85);backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(255,255,255,.04);transition:all .3s}
+.nav.scrolled{padding:12px 40px;background:rgba(6,6,6,.95);box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.nav-brand{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;text-decoration:none;color:var(--gold);letter-spacing:1px}
+.nav-back{text-decoration:none;color:var(--text-dim);font-size:.85rem;padding:8px 20px;border:1px solid rgba(255,255,255,.1);border-radius:24px;transition:all .3s;font-weight:500}
+.nav-back:hover{border-color:var(--gold);color:var(--gold);box-shadow:0 0 20px var(--gold-dim)}
+.hero{position:relative;height:50vh;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(217,177,91,.03) 0%,transparent 50%),linear-gradient(180deg,#050508 0%,var(--dark) 100%)}
+.hero-scissors{position:absolute;inset:0;pointer-events:none;opacity:.06}
+.hero-scissors::before{content:'✂';position:absolute;top:20%;right:15%;font-size:8rem;animation:snip 4s ease-in-out infinite}
+.hero-scissors::after{content:'✂';position:absolute;bottom:25%;left:12%;font-size:5rem;animation:snip 5s ease-in-out infinite 1.5s}
+@keyframes snip{0%,100%{transform:rotate(0deg) scale(1);opacity:.4}50%{transform:rotate(-15deg) scale(1.1);opacity:.8}}
+.hero-content{position:relative;z-index:2;padding:0 24px}
+.hero-badge{display:inline-block;padding:6px 16px;border-radius:20px;border:1px solid var(--gold-glow);background:var(--gold-dim);color:var(--gold);font-size:.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:900;line-height:1;margin-bottom:20px}
+.hero h1 .gold{color:var(--gold);position:relative}
+.hero h1 .gold::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:2px}
+.hero-sub{font-size:clamp(1rem,1.6vw,1.2rem);color:var(--text-dim);max-width:600px;margin:0 auto;line-height:1.7;font-weight:300}
+.filters{position:sticky;top:56px;z-index:100;background:rgba(6,6,6,.9);backdrop-filter:blur(16px);padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.04)}
+.filter-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin-bottom:10px}
+.filter-row:last-child{margin-bottom:0}
+.filter-label{font-size:.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-right:8px}
+.filter-btn{padding:6px 16px;border-radius:20px;border:1px solid rgba(255,255,255,.08);background:transparent;color:rgba(255,255,255,.5);font-size:.78rem;font-weight:500;cursor:pointer;transition:all .3s cubic-bezier(.4,0,.2,1)}
+.filter-btn:hover{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.8);background:rgba(255,255,255,.04)}
+.filter-btn.active{background:var(--gold-dim);border-color:var(--gold);color:var(--gold);box-shadow:0 0 16px rgba(217,177,91,.1)}
+.results-count{text-align:center;padding:8px;font-size:.8rem;color:var(--text-dim)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:28px;max-width:1280px;margin:0 auto;padding:48px 28px 100px}
+.card{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--card-bg);border:1px solid var(--card-border);text-decoration:none;color:var(--text);display:block;transform:translateY(30px);opacity:0;transition:all .5s cubic-bezier(.4,0,.2,1)}
+.card.visible{transform:translateY(0);opacity:1}
+.card::before{content:'';position:absolute;inset:0;border-radius:var(--radius);padding:1px;background:linear-gradient(135deg,rgba(217,177,91,0) 0%,rgba(217,177,91,.1) 50%,rgba(217,177,91,0) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .4s;pointer-events:none;z-index:3}
+.card:hover::before{opacity:1}
+.card:hover{border-color:rgba(217,177,91,.2);transform:translateY(-6px) scale(1.01);box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(217,177,91,.05)}
+.card-slideshow{position:relative;width:100%;height:240px;overflow:hidden}
+.card-slideshow::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(6,6,6,.8));z-index:1;pointer-events:none}
+.card-slideshow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.05);transition:opacity 1.2s ease,transform 6s ease}
+.card-slideshow img.active{opacity:1;transform:scale(1)}
+.slide-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.3);transition:all .4s}
+.dot.active{background:var(--gold);box-shadow:0 0 8px var(--gold-glow);transform:scale(1.3)}
+.card-body{padding:24px;position:relative}
+.card-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;margin-bottom:6px}
+.card-type{font-size:.72rem;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:12px}
+.card-desc{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:16px;font-weight:300}
+.card-meta{display:flex;align-items:center;gap:14px;font-size:.78rem;color:rgba(255,255,255,.4);flex-wrap:wrap}
+.card-meta span{display:flex;align-items:center;gap:4px}
+.card-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;padding:8px 16px;border-radius:20px;background:var(--gold-dim);border:1px solid rgba(217,177,91,.2);font-size:.75rem;color:var(--gold);font-weight:600;letter-spacing:.5px;transition:all .3s}
+.card:hover .card-cta{background:rgba(217,177,91,.25);border-color:var(--gold);box-shadow:0 4px 16px rgba(217,177,91,.15)}
+.cta{text-align:center;padding:80px 24px;position:relative}
+.cta::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(217,177,91,.2),transparent)}
+.cta h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:12px;color:var(--text)}
+.cta p{color:var(--text-dim);margin-bottom:28px;font-weight:300}
+.cta-btn{display:inline-block;padding:14px 36px;border-radius:28px;background:linear-gradient(135deg,var(--gold),#b8972e);color:#000;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:1.5px;font-size:.8rem;transition:all .3s;box-shadow:0 4px 24px rgba(217,177,91,.2)}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(217,177,91,.35)}
+.footer{text-align:center;color:rgba(255,255,255,.25);font-size:.75rem;padding:24px}
+@media(max-width:768px){.nav{padding:14px 20px}.hero{min-height:320px;height:40vh}.grid{grid-template-columns:1fr;padding:24px 16px 60px;gap:20px}.filters{top:48px;padding:14px 12px}.filter-btn{font-size:.7rem;padding:5px 12px}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+    <a class="nav-brand" href="index.html">Best of the 209</a>
+    <a class="nav-back" href="index.html">&larr; All Categories</a>
+</nav>
+<header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-scissors"></div>
+    <div class="hero-content">
+        <span class="hero-badge">Barbers &bull; Salons &bull; Style</span>
+        <h1>Best <span class="gold">Haircuts & Salons</span> in the 209</h1>
+        <p class="hero-sub">Top-rated barber shops and hair salons where the 209 goes to look sharp. Fresh cuts, expert color, and real community vibes.</p>
+    </div>
+</header>
+<div class="filters">
+    <div class="filter-row">
+        <span class="filter-label">City</span>
+        <button class="filter-btn active" data-city="all">All</button>
+        <button class="filter-btn" data-city="Stockton">Stockton</button>
+        <button class="filter-btn" data-city="Modesto">Modesto</button>
+        <button class="filter-btn" data-city="Lodi">Lodi</button>
+        <button class="filter-btn" data-city="Tracy">Tracy</button>
+        <button class="filter-btn" data-city="Manteca">Manteca</button>
+        <button class="filter-btn" data-city="Turlock">Turlock</button>
+        <button class="filter-btn" data-city="Ripon">Ripon</button>
+    </div>
+    <div class="filter-row">
+        <span class="filter-label">Type</span>
+        <button class="filter-btn active" data-type="all">All</button>
+        <button class="filter-btn" data-type="barber">Barber Shop</button>
+        <button class="filter-btn" data-type="salon">Hair Salon</button>
+    </div>
+    <div class="results-count" id="results-count"></div>
+</div>
+<section class="grid" id="hair-grid"></section>
+<section class="cta">
+    <h2>Run a top-rated shop in the 209?</h2>
+    <p>We feature the best. Let us know about your chair.</p>
+    <a class="cta-btn" href="mailto:admin@bestofthe209.com?subject=Haircuts Feature Request">Get Featured</a>
+</section>
+<div class="footer">&copy; 2026 BestOfThe209.com</div>
+<script>
+const shops = [
+{name:"Speakeasy Hair Co.",city:"Stockton",type:"barber",style:"Old School Elegance — Beer on Tap",desc:"A chill vibe with old school barber shop elegance. Vic takes pride in his craft with tailored haircuts and beard work. Beer on tap while you wait. Barbers Nate and Oscar deliver consistent, amazing cuts every time.",slug:"speakeasy-hair",query:"Speakeasy Hair Co Stockton CA",placeId:"ChIJS1M2MWwNkIARjxWNd-a107k",highlight:"Old School • Beer on Tap • Tailored Cuts"},
+{name:"Craft Barber Co.",city:"Stockton",type:"barber",style:"Detail-Oriented — Super Solid Scissor Work",desc:"A comfortable and welcoming barbershop with attentive, detail-oriented barbers who are quick to help. Clean, sharp, high-quality haircuts with super solid scissor work. Nice atmosphere and a great community feel.",slug:"craft-barber",query:"Craft Barber Co Stockton CA",placeId:"ChIJ5_t3VSYNkIAR_w5IIV0gyc8",highlight:"Scissor Work • Detail • Welcoming"},
+{name:"True Culture Barber Lounge",city:"Stockton",type:"barber",style:"Flawless Fades — Professional & Friendly",desc:"Always a great experience with consistently on-point haircuts. Flawless fades on both hair and beard in a welcoming, friendly, and professional environment. Makes every visit enjoyable.",slug:"true-culture",query:"True Culture Barber Lounge Stockton CA",placeId:"ChIJA_arR4ETkIARlMPba2NV84c",highlight:"Flawless Fades • Beard • Professional"},
+{name:"The Magic Shop",city:"Stockton",type:"salon",style:"Premier Styling — Transformations",desc:"Stockton's premier destination for exceptional hair styling services. They specialize in transforming your everyday look into something truly magical. Expert colorists and stylists for all hair types.",slug:"magic-shop",query:"The Magic Shop hair salon Stockton CA",placeId:"ChIJtS8_aiENkIARb9n0-rhsID8",highlight:"Transformations • Color • All Types"},
+{name:"Fredrick's Barber & Style",city:"Modesto",type:"barber",style:"The Best — A Magician with Hair",desc:"Fredrick is called a magician when it comes to cutting hair. Excellent haircuts and color that keep loyal customers coming back. Highly recommended by everyone who sits in his chair.",slug:"fredricks-modesto",query:"Fredrick's Barber Style Modesto CA",placeId:"ChIJO67w3QBRkIARCjxrHJwPP1U",highlight:"Magician • Color Expert • Loyal Clients"},
+{name:"Golden State Barber Shop",city:"Tracy",type:"barber",style:"4.6 Stars — Kids & Adults Love It",desc:"Amazing haircuts that kids and adults both love. Compliments guaranteed. Clean, nice interior with skilled barbers like Marvin who deliver great cuts consistently. A Tracy favorite.",slug:"golden-state-tracy",query:"Golden State Barber Shop Tracy CA",placeId:"ChIJOSY1QDw9kIARwSdYbQkatJ4",highlight:"Kids Friendly • Compliments • Tracy"},
+{name:"Bambi Salon",city:"Tracy",type:"salon",style:"10+ Years Loyal Clients — Best Compliments",desc:"Tracy's favorite salon for over 10 years running. Clients always get the best compliments from everyone after their haircut. Bambi delivers consistent quality that builds decade-long relationships.",slug:"bambi-salon",query:"Bambi Salon Tracy CA Grant Line Road",placeId:"ChIJ66pV93YYkIARZZLwGnP4nNA",highlight:"10+ Years • Best Compliments • Loyal"},
+{name:"Redefined Hair Studio",city:"Tracy",type:"salon",style:"5.0 Stars — Braids & Quality Work",desc:"Amazing braids and quality work done fast. Erica's studio is cute and welcoming with easy scheduling. Daughters and moms both leave looking incredible. A fresh addition to Tracy's salon scene.",slug:"redefined-tracy",query:"Redefined Hair Studio Tracy CA",placeId:"ChIJjyINrQo9kIARdDi6mXkfta8",highlight:"5.0 Stars • Braids • Fast & Quality"},
+{name:"Noemi's Hair Studio",city:"Manteca",type:"salon",style:"Artist & Great Listener — Warm & Professional",desc:"Noemi is the best — a warm person and true artist who really knows the beauty business. Very knowledgeable, professional, and a great listener who takes time with you individually. Manteca's go-to stylist.",slug:"noemi-manteca",query:"Noemi hair salon Manteca CA",placeId:"ChIJC4gAYDM9kIARQSNhCaOPNCw",highlight:"Artist • Warm • Knowledgeable • Manteca"},
+{name:"Johni — Blonde Specialist",city:"Ripon",type:"salon",style:"THE Girl for Blondes — Healthy & Bright",desc:"Johni is THE girl for blondes in the 209. She takes time and care to give the brightest blonde without sacrificing hair health — keeping hair healthy and long. A Ripon specialist worth the drive.",slug:"johni-ripon",query:"Johni hair stylist blonde specialist Ripon CA",placeId:"ChIJT6fy_01EkIARMG7MlQuKqss",highlight:"Blonde Expert • Healthy Hair • Ripon"},
+{name:"Christine's Salon",city:"Turlock",type:"salon",style:"Always Excellent — Turlock Favorite",desc:"Christine has always done an excellent job. A Turlock staple with loyal clients who wouldn't go anywhere else. Consistent quality cuts, color, and styling for women and men in southern Stanislaus County.",slug:"christines-turlock",query:"Christine salon hair Turlock CA",placeId:"ChIJGdchwk4GkYARa4GJJGq4qFs",highlight:"Always Excellent • Turlock • Loyal"},
+{name:"Lodi Barber Shop",city:"Lodi",type:"barber",style:"No Frills — Great Haircut Every Time",desc:"A no-frills barber shop that delivers a great haircut every single time. The kind of old-school shop where guys go for a reliable cut without the fuss. A Lodi institution for those who value consistency.",slug:"lodi-barber",query:"Lodi Barber Shop Lodi CA",placeId:"ChIJg36oKhigmoAR53FTJlvtfIs",highlight:"No Frills • Consistent • Old School"},
+];
+
+const grid = document.getElementById('hair-grid');
+const countEl = document.getElementById('results-count');
+function getMapsLink(q,pid){return pid?`https://www.google.com/maps/place/?q=place_id:${pid}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`}
+
+for(let i=shops.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[shops[i],shops[j]]=[shops[j],shops[i]]}
+
+shops.forEach(o => {
+    const card = document.createElement('a');
+    card.className = 'card';
+    card.dataset.city = o.city;
+    card.dataset.type = o.type;
+    card.href = getMapsLink(o.query, o.placeId);
+    card.target = '_blank';
+    card.rel = 'noopener';
+    card.innerHTML = `
+        <div class="card-slideshow">
+            <img src="images/haircuts/${o.slug}/1.jpg" alt="${o.name}" class="active" loading="lazy">
+            <img src="images/haircuts/${o.slug}/2.jpg" alt="${o.name}" loading="lazy" onerror="this.remove()">
+            <img src="images/haircuts/${o.slug}/3.jpg" alt="${o.name}" loading="lazy" onerror="this.remove()">
+            <div class="slide-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>
+        <div class="card-body">
+            <div class="card-name">${o.name}</div>
+            <div class="card-type">${o.style}</div>
+            <div class="card-desc">${o.desc}</div>
+            <div class="card-meta">
+                <span>📍 ${o.city}</span>
+                <span>✂️ ${o.highlight}</span>
+            </div>
+            <span class="card-cta">View on Maps &rarr;</span>
+        </div>`;
+    grid.appendChild(card);
+});
+
+document.querySelectorAll('.card-slideshow').forEach(ss=>{const imgs=ss.querySelectorAll('img');const dots=ss.querySelectorAll('.dot');let cur=0;if(imgs.length>1)setInterval(()=>{imgs[cur].classList.remove('active');dots[cur]&&dots[cur].classList.remove('active');cur=(cur+1)%imgs.length;imgs[cur].classList.add('active');dots[cur]&&dots[cur].classList.add('active')},3500+Math.random()*2000)});
+const observer=new IntersectionObserver(entries=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*60);observer.unobserve(entry.target)}})},{threshold:.1});
+document.querySelectorAll('.card').forEach(c=>observer.observe(c));
+
+let activeCity='all',activeType='all';
+function applyFilters(){let count=0;document.querySelectorAll('.card').forEach(card=>{const cm=activeCity==='all'||card.dataset.city===activeCity;const tm=activeType==='all'||card.dataset.type===activeType;const show=cm&&tm;card.style.display=show?'':'none';if(show)count++});countEl.textContent=`Showing ${count} shop${count!==1?'s':''}`}
+document.querySelectorAll('[data-city]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-city]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeCity=btn.dataset.city;applyFilters()})});
+document.querySelectorAll('[data-type]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-type]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeType=btn.dataset.type;applyFilters()})});
+applyFilters();
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60)});
+</script>
+</body>
+</html>
