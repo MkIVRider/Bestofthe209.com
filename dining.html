@@ -717,7 +717,7 @@ const restaurants = [
 const grid = document.getElementById('restaurant-grid');
 const countEl = document.getElementById('results-count');
 
-function getMapsLink(q){ return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`; }
+function getMapsLink(q,pid){ return pid?`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}&query_place_id=${pid}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`; }
 
 // Shuffle on load so no restaurant gets permanent top billing
 function shuffle(arr){
@@ -735,7 +735,7 @@ restaurants.forEach(r => {
     card.className = 'card';
     card.dataset.category = r.category;
     card.dataset.city = r.city;
-    card.href = getMapsLink(r.query);
+    card.href = getMapsLink(r.query, r.placeId);
     card.target = '_blank';
     card.rel = 'noopener';
 
