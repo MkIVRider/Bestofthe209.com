@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5658205454534021"
+     crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Boating & Water in the 209 | Best of the 209</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#d9b15b;--gold-dim:rgba(217,177,91,.15);--gold-glow:rgba(217,177,91,.3);--dark:#060606;--card-bg:rgba(255,255,255,.03);--card-border:rgba(255,255,255,.06);--text:#f0f0f0;--text-dim:#999;--radius:16px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:rgba(6,6,6,.85);backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(255,255,255,.04);transition:all .3s}
+.nav.scrolled{padding:12px 40px;background:rgba(6,6,6,.95);box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.nav-brand{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;text-decoration:none;color:var(--gold);letter-spacing:1px}
+.nav-back{text-decoration:none;color:var(--text-dim);font-size:.85rem;padding:8px 20px;border:1px solid rgba(255,255,255,.1);border-radius:24px;transition:all .3s;font-weight:500}
+.nav-back:hover{border-color:var(--gold);color:var(--gold);box-shadow:0 0 20px var(--gold-dim)}
+
+.hero{position:relative;height:50vh;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(30,80,140,.08) 0%,transparent 50%),linear-gradient(180deg,#050508 0%,var(--dark) 100%)}
+
+/* Wave animation */
+.hero-waves{position:absolute;bottom:0;left:0;right:0;height:50%;pointer-events:none;overflow:hidden}
+.hero-waves::before{content:'';position:absolute;bottom:-10%;left:-5%;width:110%;height:60%;border-radius:50%;border:1.5px solid rgba(217,177,91,.15);animation:wave1 7s ease-in-out infinite}
+.hero-waves::after{content:'';position:absolute;bottom:-15%;left:0%;width:100%;height:50%;border-radius:50%;border:1.5px solid rgba(217,177,91,.1);animation:wave2 9s ease-in-out infinite 1.5s}
+@keyframes wave1{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(20px) translateY(-10px)}}
+@keyframes wave2{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(-15px) translateY(-8px)}}
+
+/* Boat wake dots */
+.hero-wake{position:absolute;bottom:35%;left:20%;width:60%;height:2px;pointer-events:none}
+.hero-wake::before{content:'';position:absolute;width:100%;height:100%;background:repeating-linear-gradient(90deg,transparent 0px,transparent 8px,var(--gold) 8px,var(--gold) 12px);opacity:0;animation:wake-move 5s ease-in-out infinite}
+@keyframes wake-move{0%,100%{opacity:0;transform:scaleX(.3) translateX(-20%)}50%{opacity:.2;transform:scaleX(1) translateX(0)}}
+
+.hero-content{position:relative;z-index:2;padding:0 24px}
+.hero-badge{display:inline-block;padding:6px 16px;border-radius:20px;border:1px solid var(--gold-glow);background:var(--gold-dim);color:var(--gold);font-size:.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:900;line-height:1;margin-bottom:20px}
+.hero h1 .gold{color:var(--gold);position:relative}
+.hero h1 .gold::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:2px}
+.hero-sub{font-size:clamp(1rem,1.6vw,1.2rem);color:var(--text-dim);max-width:600px;margin:0 auto;line-height:1.7;font-weight:300}
+
+.filters{position:sticky;top:56px;z-index:100;background:rgba(6,6,6,.9);backdrop-filter:blur(16px);padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.04)}
+.filter-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin-bottom:10px}
+.filter-row:last-child{margin-bottom:0}
+.filter-label{font-size:.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-right:8px}
+.filter-btn{padding:6px 16px;border-radius:20px;border:1px solid rgba(255,255,255,.08);background:transparent;color:rgba(255,255,255,.5);font-size:.78rem;font-weight:500;cursor:pointer;transition:all .3s cubic-bezier(.4,0,.2,1)}
+.filter-btn:hover{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.8);background:rgba(255,255,255,.04)}
+.filter-btn.active{background:var(--gold-dim);border-color:var(--gold);color:var(--gold);box-shadow:0 0 16px rgba(217,177,91,.1)}
+.results-count{text-align:center;padding:8px;font-size:.8rem;color:var(--text-dim)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:28px;max-width:1280px;margin:0 auto;padding:48px 28px 100px}
+.card{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--card-bg);border:1px solid var(--card-border);text-decoration:none;color:var(--text);display:block;transform:translateY(30px);opacity:0;transition:all .5s cubic-bezier(.4,0,.2,1)}
+.card.visible{transform:translateY(0);opacity:1}
+.card::before{content:'';position:absolute;inset:0;border-radius:var(--radius);padding:1px;background:linear-gradient(135deg,rgba(217,177,91,0) 0%,rgba(217,177,91,.1) 50%,rgba(217,177,91,0) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .4s;pointer-events:none;z-index:3}
+.card:hover::before{opacity:1}
+.card:hover{border-color:rgba(217,177,91,.2);transform:translateY(-6px) scale(1.01);box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(217,177,91,.05)}
+
+.card-slideshow{position:relative;width:100%;height:240px;overflow:hidden}
+.card-slideshow::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(6,6,6,.8));z-index:1;pointer-events:none}
+.card-slideshow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.05);transition:opacity 1.2s ease,transform 6s ease}
+.card-slideshow img.active{opacity:1;transform:scale(1)}
+.slide-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.3);transition:all .4s}
+.dot.active{background:var(--gold);box-shadow:0 0 8px var(--gold-glow);transform:scale(1.3)}
+
+.card-body{padding:24px;position:relative}
+.card-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;margin-bottom:6px}
+.card-type{font-size:.72rem;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:12px}
+.card-desc{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:16px;font-weight:300}
+.card-meta{display:flex;align-items:center;gap:14px;font-size:.78rem;color:rgba(255,255,255,.4);flex-wrap:wrap}
+.card-meta span{display:flex;align-items:center;gap:4px}
+.card-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;padding:8px 16px;border-radius:20px;background:var(--gold-dim);border:1px solid rgba(217,177,91,.2);font-size:.75rem;color:var(--gold);font-weight:600;letter-spacing:.5px;transition:all .3s}
+.card:hover .card-cta{background:rgba(217,177,91,.25);border-color:var(--gold);box-shadow:0 4px 16px rgba(217,177,91,.15)}
+
+.cta{text-align:center;padding:80px 24px;position:relative}
+.cta::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(217,177,91,.2),transparent)}
+.cta h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:12px;color:var(--text)}
+.cta p{color:var(--text-dim);margin-bottom:28px;font-weight:300}
+.cta-btn{display:inline-block;padding:14px 36px;border-radius:28px;background:linear-gradient(135deg,var(--gold),#b8972e);color:#000;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:1.5px;font-size:.8rem;transition:all .3s;box-shadow:0 4px 24px rgba(217,177,91,.2)}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(217,177,91,.35)}
+.footer{text-align:center;color:rgba(255,255,255,.25);font-size:.75rem;padding:24px}
+
+@media(max-width:768px){.nav{padding:14px 20px}.hero{min-height:320px;height:40vh}.grid{grid-template-columns:1fr;padding:24px 16px 60px;gap:20px}.filters{top:48px;padding:14px 12px}.filter-btn{font-size:.7rem;padding:5px 12px}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+    <a class="nav-brand" href="index.html">Best of the 209</a>
+    <a class="nav-back" href="index.html">&larr; All Categories</a>
+</nav>
+
+<header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-waves"></div>
+    <div class="hero-wake"></div>
+    <div class="hero-content">
+        <span class="hero-badge">Lakes &bull; Delta &bull; Marinas</span>
+        <h1>Best <span class="gold">Boating & Water</span> in the 209</h1>
+        <p class="hero-sub">From the vast Sacramento-San Joaquin Delta to crystal foothill reservoirs, discover the best places to boat, ski, paddle, and swim in the Central Valley.</p>
+    </div>
+</header>
+
+<div class="filters">
+    <div class="filter-row">
+        <span class="filter-label">Area</span>
+        <button class="filter-btn active" data-area="all">All</button>
+        <button class="filter-btn" data-area="Delta">Delta</button>
+        <button class="filter-btn" data-area="Stockton">Stockton</button>
+        <button class="filter-btn" data-area="Foothills">Foothills</button>
+        <button class="filter-btn" data-area="Lodi">Lodi</button>
+        <button class="filter-btn" data-area="Oakdale">Oakdale</button>
+    </div>
+    <div class="filter-row">
+        <span class="filter-label">Type</span>
+        <button class="filter-btn active" data-type="all">All</button>
+        <button class="filter-btn" data-type="lake">Lake / Reservoir</button>
+        <button class="filter-btn" data-type="marina">Marina</button>
+        <button class="filter-btn" data-type="rental">Rental / Paddle</button>
+    </div>
+    <div class="results-count" id="results-count"></div>
+</div>
+
+<section class="grid" id="boat-grid"></section>
+
+<section class="cta">
+    <h2>Know a great spot we're missing?</h2>
+    <p>We feature the best. Tell us about your favorite launch or marina.</p>
+    <a class="cta-btn" href="mailto:admin@bestofthe209.com?subject=Boating Feature Request">Get Featured</a>
+</section>
+
+<div class="footer">&copy; 2026 BestOfThe209.com</div>
+
+<script>
+const spots = [
+{name:"Sacramento-San Joaquin Delta",area:"Delta",type:"lake",style:"1,000+ Miles of Waterways",desc:"One of the largest estuaries on the West Coast with over 1,000 miles of navigable waterways. Houseboating, water skiing, wakeboarding, fishing, and cruising through islands and sloughs. Endless exploration from multiple launch points across the 209.",slug:"delta-boating",query:"Sacramento San Joaquin Delta boating California",highlight:"1,000+ Miles • Houseboats • Skiing • Islands"},
+{name:"New Melones Lake",area:"Foothills",type:"lake",style:"3rd Largest in CA — Uncrowded",desc:"California's 3rd largest reservoir with smooth water perfect for skiing, wakeboarding, jet skiing, sailing, kayaking, and swimming. Miles of waterways with plenty of quiet coves. Glory Hole Recreation Area offers boat launches and rentals.",slug:"new-melones-boat",query:"New Melones Lake boating Glory Hole Recreation Area CA",highlight:"Uncrowded • Skiing • Jet Ski • Kayak"},
+{name:"Don Pedro Lake",area:"Foothills",type:"lake",style:"13,000 Acres — 160 Miles of Shoreline",desc:"A massive reservoir east of Modesto with 160 miles of shoreline and room for all kinds of boaters. Houseboats cruise miles of channels, water skiers spread across a dozen large bays, and sailors catch foothill breezes. Full marina services available.",slug:"don-pedro-boat",query:"Don Pedro Lake boating marina La Grange CA",highlight:"160 mi Shoreline • Houseboats • Bays"},
+{name:"Lake Tulloch",area:"Foothills",type:"lake",style:"Glassy Water — Skiing & Wakeboarding",desc:"A 1,260-acre reservoir near Copperopolis with 55 miles of shoreline. Surrounding foothills block the wind creating glassy conditions ideal for water skiing and wakeboarding. One of the few lakes in California with private shoreline homes.",slug:"lake-tulloch-boat",query:"Lake Tulloch boating Copperopolis CA",highlight:"Glassy Water • Wake • 55 mi Shoreline"},
+{name:"Lake Camanche",area:"Foothills",type:"lake",style:"Full Recreation — Ski, Swim, Paddle",desc:"A popular foothill reservoir with the main body open for skiing, wakeboarding, and tubing, while the upper lake is reserved for quieter paddle sports. North and South shore marinas with boat rentals, swimming beaches, and full camping facilities.",slug:"camanche-boat",query:"Lake Camanche boating swimming North Shore CA",highlight:"Ski Zone • Quiet Zone • Beaches • Rentals"},
+{name:"Woodward Reservoir",area:"Oakdale",type:"lake",style:"2,427 Acres — Boating, Skiing, Swimming",desc:"A large reservoir just north of Oakdale popular with speed boaters, water skiers, and swimmers. Multiple paved boat launch ramps, dedicated swimming beaches, shaded picnic areas, and camping. Quick trip from Stockton or Modesto.",slug:"woodward-boat",query:"Woodward Reservoir boating Oakdale CA",highlight:"Speed Boats • Swimming • Beaches • RV"},
+{name:"Modesto Reservoir",area:"Oakdale",type:"lake",style:"3,800 Acres — Summer Hot Spot",desc:"A fairly large reservoir east of Modesto that's wildly popular for summer water sports. Speed boating, water skiing, swimming, and jet skiing with designated zones. County-managed park with camping and RV sites.",slug:"modesto-res-boat",query:"Modesto Reservoir boating water skiing Waterford CA",highlight:"3,800 Acres • Jet Ski • Speed Zones"},
+{name:"Paradise Point Marina",area:"Delta",type:"marina",style:"Full Service — Houseboats, Ski Boats, Pontoons",desc:"Begin your Delta adventure at this full-service marina with an extensive rental fleet of houseboats, ski boats, patio boats, and fishing boats. Also offers ski equipment rentals, a lakeside grocery, tackle store, and complete marina services.",slug:"paradise-point",query:"Paradise Point Marina Stockton CA",highlight:"Houseboat Rentals • Ski Boats • Full Service"},
+{name:"Village West Marina",area:"Stockton",type:"marina",style:"600+ Berths — Premier Delta Marina",desc:"A premier full-service marina on Fourteenmile Slough with over 600 covered and open berths. Fuel dock, pump-out station, well-stocked ship store, and a friendly boating community. Ideal launch point for Delta cruising.",slug:"village-west",query:"Village West Marina Stockton CA",highlight:"600 Berths • Fuel • Ship Store • Community"},
+{name:"Stockton Downtown Marina",area:"Stockton",type:"marina",style:"Heart of Downtown — Delta Gateway",desc:"Located in the heart of downtown Stockton with convenient access to the Sacramento-San Joaquin Delta. Long-term berthing available, close to dining, entertainment, and the Joan Darrah Promenade waterfront walk.",slug:"stockton-marina-dt",query:"Stockton Downtown Marina Joan Darrah Promenade CA",highlight:"Downtown • Dining • Promenade • Berthing"},
+{name:"Turner Cut Resort & Marina",area:"Delta",type:"marina",style:"Family-Owned — 200 Slips on 20 Acres",desc:"A family-owned marina and RV park on 20 Delta acres with 200 boat slips, fuel dock, launch ramp, and some of the best fishing access in California. A true Delta experience with campgrounds and a relaxed waterfront vibe.",slug:"turner-cut",query:"Turner Cut Resort Marina Delta California",highlight:"200 Slips • Family • Fuel • RV Park"},
+{name:"Herman & Helen's Marina",area:"Stockton",type:"marina",style:"Delta Classic — Houseboats & Cruisers",desc:"A legendary Delta marina offering houseboat rentals and long-term berthing. A Stockton institution for decades, known for putting families on the water with comfortable houseboats and easy Delta access.",slug:"herman-helens",query:"Herman and Helens Marina Stockton CA",highlight:"Houseboats • Classic • Families • Delta"},
+{name:"Headwaters Kayak — Lodi Lake",area:"Lodi",type:"rental",style:"Kayak, SUP & Guided Tours",desc:"Kayak and stand-up paddleboard rentals at Lodi Lake on the Mokelumne River. Guided tours, lessons, and hourly rentals for solo or tandem paddling. Open weekends spring through fall with summer daily hours.",slug:"headwaters-kayak",query:"Headwaters Kayak Lodi Lake CA paddleboard",highlight:"Kayak • SUP • Guided Tours • Lodi Lake"},
+{name:"Tower Park Resort — Jellystone",area:"Lodi",type:"rental",style:"Kayak, Pontoon & Paddleboard Rentals",desc:"Yogi Bear's Jellystone Park on the Delta near Lodi offers kayak, paddleboard, and pontoon boat rentals right from the waterfront. Single and double kayaks, morning and afternoon time slots, plus on-site dining at the Waterfront Grille.",slug:"tower-park",query:"Tower Park Resort Jellystone Lodi CA water rentals",highlight:"Pontoons • Kayaks • SUP • Waterfront Dining"},
+{name:"Kokopelli Kayak Rentals",area:"Delta",type:"rental",style:"Delta Kayak Adventures — Wildlife",desc:"Explore the Delta up close by kayak. Paddle through tule areas, around islands, and inside marinas. See otters, beavers, seals, turtles, and birds of all kinds. A fantastic way to experience nature on the water without a motor.",slug:"kokopelli-kayak",query:"Kokopelli Kayak Rentals Delta California",highlight:"Wildlife • Islands • Tule • No Motor"},
+];
+
+const grid = document.getElementById('boat-grid');
+const countEl = document.getElementById('results-count');
+function getMapsLink(q){return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`}
+
+// Shuffle
+for(let i=spots.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[spots[i],spots[j]]=[spots[j],spots[i]]}
+
+spots.forEach(o => {
+    const card = document.createElement('a');
+    card.className = 'card';
+    card.dataset.area = o.area;
+    card.dataset.type = o.type;
+    card.href = getMapsLink(o.query);
+    card.target = '_blank';
+    card.rel = 'noopener';
+
+    card.innerHTML = `
+        <div class="card-slideshow">
+            <img src="images/boating/${o.slug}/1.jpg" alt="${o.name}" class="active" loading="lazy">
+            <img src="images/boating/${o.slug}/2.jpg" alt="${o.name}" loading="lazy" onerror="this.remove()">
+            <img src="images/boating/${o.slug}/3.jpg" alt="${o.name}" loading="lazy" onerror="this.remove()">
+            <div class="slide-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>
+        <div class="card-body">
+            <div class="card-name">${o.name}</div>
+            <div class="card-type">${o.style}</div>
+            <div class="card-desc">${o.desc}</div>
+            <div class="card-meta">
+                <span>📍 ${o.area}</span>
+                <span>🚤 ${o.highlight}</span>
+            </div>
+            <span class="card-cta">View on Maps &rarr;</span>
+        </div>`;
+    grid.appendChild(card);
+});
+
+// Slideshows
+document.querySelectorAll('.card-slideshow').forEach(ss=>{const imgs=ss.querySelectorAll('img');const dots=ss.querySelectorAll('.dot');let cur=0;if(imgs.length>1)setInterval(()=>{imgs[cur].classList.remove('active');dots[cur]&&dots[cur].classList.remove('active');cur=(cur+1)%imgs.length;imgs[cur].classList.add('active');dots[cur]&&dots[cur].classList.add('active')},3500+Math.random()*2000)});
+
+// Scroll reveal
+const observer=new IntersectionObserver(entries=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*60);observer.unobserve(entry.target)}})},{threshold:.1});
+document.querySelectorAll('.card').forEach(c=>observer.observe(c));
+
+// Filters
+let activeArea='all',activeType='all';
+function applyFilters(){let count=0;document.querySelectorAll('.card').forEach(card=>{const am=activeArea==='all'||card.dataset.area===activeArea;const tm=activeType==='all'||card.dataset.type===activeType;const show=am&&tm;card.style.display=show?'':'none';if(show)count++});countEl.textContent=`Showing ${count} spot${count!==1?'s':''}`}
+document.querySelectorAll('[data-area]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-area]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeArea=btn.dataset.area;applyFilters()})});
+document.querySelectorAll('[data-type]').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('[data-type]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeType=btn.dataset.type;applyFilters()})});
+applyFilters();
+
+// Nav
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60)});
+</script>
+</body>
+</html>
