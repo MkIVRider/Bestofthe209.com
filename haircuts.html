@@ -94,6 +94,10 @@ body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url(
         <button class="filter-btn" data-city="Manteca">Manteca</button>
         <button class="filter-btn" data-city="Turlock">Turlock</button>
         <button class="filter-btn" data-city="Ripon">Ripon</button>
+        <button class="filter-btn" data-city="Oakdale">Oakdale</button>
+        <button class="filter-btn" data-city="Ceres">Ceres</button>
+        <button class="filter-btn" data-city="Escalon">Escalon</button>
+        <button class="filter-btn" data-city="Angels Camp">Angels Camp</button>
     </div>
     <div class="filter-row">
         <span class="filter-label">Type</span>
@@ -124,6 +128,11 @@ const shops = [
 {name:"Johni — Blonde Specialist",city:"Ripon",type:"salon",style:"THE Girl for Blondes — Healthy & Bright",desc:"Johni is THE girl for blondes in the 209. She takes time and care to give the brightest blonde without sacrificing hair health — keeping hair healthy and long. A Ripon specialist worth the drive.",slug:"johni-ripon",query:"Johni hair stylist blonde specialist Ripon CA",placeId:"ChIJT6fy_01EkIARMG7MlQuKqss",highlight:"Blonde Expert • Healthy Hair • Ripon"},
 {name:"Christine's Salon",city:"Turlock",type:"salon",style:"Always Excellent — Turlock Favorite",desc:"Christine has always done an excellent job. A Turlock staple with loyal clients who wouldn't go anywhere else. Consistent quality cuts, color, and styling for women and men in southern Stanislaus County.",slug:"christines-turlock",query:"Christine salon hair Turlock CA",placeId:"ChIJGdchwk4GkYARa4GJJGq4qFs",highlight:"Always Excellent • Turlock • Loyal"},
 {name:"Lodi Barber Shop",city:"Lodi",type:"barber",style:"No Frills — Great Haircut Every Time",desc:"A no-frills barber shop that delivers a great haircut every single time. The kind of old-school shop where guys go for a reliable cut without the fuss. A Lodi institution for those who value consistency.",slug:"lodi-barber",query:"Lodi Barber Shop Lodi CA",placeId:"ChIJg36oKhigmoAR53FTJlvtfIs",highlight:"No Frills • Consistent • Old School"},
+{name:"Locals Only Barbershop",city:"Oakdale",type:"barber",style:"Best in Town — Kid Friendly",desc:"Known as the best barber in Oakdale and the number one go-to stylist in town. Kid friendly with children showing nothing but smiles. Great location, great staff, and awesome haircuts that keep the whole family coming back.",slug:"locals-only-oakdale",query:"Locals Only Barbershop Oakdale CA",placeId:"ChIJT6OggZ35kIARnW_YYWEr3Ik",highlight:"Best in Oakdale • Kids • Go-To Stylist"},
+{name:"Backroads Barber",city:"Oakdale",type:"barber",style:"Patient & Friendly — Relaxed Atmosphere",desc:"Patient, friendly staff who make sure you get exactly what you want. Relaxed atmosphere where you leave feeling great about the cut. A solid Oakdale option for anyone who wants a no-pressure haircut experience.",slug:"backroads-barber",query:"Backroads Barber Oakdale CA",placeId:"ChIJk8ymLNT5kIARFzDJHcAbDYE",highlight:"Patient • Relaxed • Oakdale"},
+{name:"Babylon Cuts",city:"Ceres",type:"barber",style:"Since 2000 — Quality & Professionalism",desc:"One of the most prominent barber spots in Ceres since 2000. Guaranteeing quality and professionalism to all customers. Great customer service, talented barbers, and a chill atmosphere. Easily a 5-star experience.",slug:"babylon-cuts",query:"Babylon Cuts barber shop Ceres CA",placeId:"ChIJPRJFjCyrkYARVV-fOPpgZog",highlight:"Since 2000 • 5-Star • Chill • Ceres"},
+{name:"The Salon & Boutique",city:"Angels Camp",type:"salon",style:"Historic Downtown — Best Service & Price",desc:"The ultimate beauty destination in historic downtown Angels Camp. Hands down the best service, price, and results. Makes mothers and daughters feel comfortable. Professional, friendly, and exceptional work from the whole team.",slug:"salon-angels-camp",query:"The Salon Boutique Angels Camp CA",placeId:"ChIJy7c51ISVkIAR6eidRY-Spcg",highlight:"Downtown • Best Price • Mother-Daughter"},
+{name:"Escalon Barber Shop",city:"Escalon",type:"barber",style:"Quality Service — Senior Friendly",desc:"Good quality service where they cut your hair the way you want it. Not restricted to just a few select styles. Reasonably priced, especially for senior citizens. A reliable Escalon staple on McHenry Avenue.",slug:"escalon-barber",query:"barber shop Escalon CA McHenry Avenue",placeId:"ChIJ661-bNlZkIARkLxKFpq8KvI",highlight:"Your Way • Senior Friendly • Escalon"},
 ];
 
 const grid = document.getElementById('hair-grid');
