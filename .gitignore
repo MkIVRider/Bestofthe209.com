@@ -1,9 +1,11 @@
 # API keys & config
 config.js
 
-# Fetch scripts (local tooling only, contain API keys)
+# Fetch/utility scripts (local tooling only, contain API keys)
 fetch-*.js
 fix-*.js
+add-*.js
+verify-*.js
 
 # Node
 node_modules/
